@@ -1,9 +1,16 @@
 {
   "name": "template-vue-mobile",
-  "author": {"name": "Jeff9511"},
+  "author": {
+    "name": "Jeff9511"
+  },
   "version": "1.0.0",
   "description": "mobile vue template support typescript",
-  "keywords": ["vue","mobile","template","typescript"],
+  "keywords": [
+    "vue",
+    "mobile",
+    "template",
+    "typescript"
+  ],
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,6 +30,7 @@
     "vue-router": "^3.1.3"
   },
   "devDependencies": {
+    "@heibanfe/stylelint-config-heiban": "^1.0.1",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
@@ -42,11 +50,6 @@
     "sass-loader": "^8.0.0",
     "typescript": "~3.5.3",
     "vue-template-compiler": "^2.6.10"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
   },
   "husky": {
     "hooks": {
@@ -68,5 +71,10 @@
       "yarn run format",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
