@@ -3,10 +3,6 @@ import App from './App.vue'
 import router from './router'
 
 import Vant from 'vant'
-import 'vant/lib/index.css'
-
-import '@/styles/reset.css' // reset css
-import '@/styles/index.scss' // global css
 
 Vue.use(Vant)
 

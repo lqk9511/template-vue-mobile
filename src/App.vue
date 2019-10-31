@@ -5,16 +5,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import 'vant/lib/index.css'
+import '@/styles/reset.css' // reset css
+import '@/styles/index.scss' // global css
+
 import HelloWorld from './components/HelloWorld.vue'
 
-export default Vue.extend({
+export default {
   name: 'app',
   components: {
     HelloWorld
   }
-})
+}
 </script>
 
 <style lang="scss">
