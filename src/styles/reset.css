@@ -185,9 +185,11 @@ input {
  */
 
 button,
-select {
+select,
+option {
   /* 1 */
   text-transform: none;
+  outline: none;
 }
 
 /**
