@@ -8,7 +8,7 @@ module.exports = {
   productionSourceMap: process.env.NODE_ENV !== 'development',
   devServer: {},
   css: {
-    requireModuleExtension: false,
+    requireModuleExtension: true,
     loaderOptions: {
       css: {
         modules: {

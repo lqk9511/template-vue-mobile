@@ -1,5 +1,7 @@
 import axios from 'axios'
 import { CODE_OK } from 'config/httpStatusCode'
+import { Toast } from 'vant'
+
 // 创建axios实例
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API, // api的base_url
@@ -23,14 +25,16 @@ service.interceptors.request.use(
 // response拦截器
 service.interceptors.response.use(
   response => {
-    const { data } = response
-    if (process.env.NODE_ENV !== 'production')
-      console.log('TCL: data', response)
-    if (data.code === CODE_OK) {
-      return data
-    } else {
-      // 状态码不对时候
+    const { config, data } = response
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line
+      console.log(`JEFF: ${config.url}`, response)
     }
+    if (data.code !== CODE_OK) {
+      // 状态码不对时候
+      data.msg && Toast(data.msg)
+    }
+    return data
   },
   error => {
     return Promise.reject(error)
